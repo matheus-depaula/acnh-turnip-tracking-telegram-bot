@@ -1,6 +1,6 @@
 {
   "name": "acnh-turnip-tracking-telegram-bot",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "index.js",
   "license": "ISC",
   "author": "Matheus de Paula <matheus.depauladomingos@gmail.com> (https://twitter.com/math_dpaula)",
