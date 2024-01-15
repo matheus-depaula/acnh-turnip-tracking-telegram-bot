@@ -1,0 +1,18 @@
+# DIRECTORIES
+node_modules
+build
+dist
+
+# PACKAGE MANAGER
+yarn.lock
+package-lock.json
+yarn-debug.log*
+yarn-error.log*
+
+# ENVIRONMENT
+.env
+env
+
+# ETC
+swagger.json
+src/api/rest/routes/swagger.routes.ts

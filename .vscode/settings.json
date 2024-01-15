@@ -1,0 +1,31 @@
+{
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "typescript.preferences.importModuleSpecifier": "relative",
+    "editor.formatOnSave": true
+  },
+  "todo-tree.filtering.excludeGlobs": ["**/(node_modules|dist|build)/*/**"],
+  "todo-tree.general.tags": ["BUG", "FIX", "TODO"],
+  "todo-tree.general.tagGroups": {
+    "FIXME": ["FIXME", "FIXIT", "FIX"]
+  },
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "background": "#3B71CA",
+      "iconColour": "#3B71CA",
+      "foreground": "#FBFBFB"
+    },
+    "BUG": {
+      "icon": "bug",
+      "background": "#DC4C64",
+      "iconColour": "#DC4C64",
+      "foreground": "#FBFBFB"
+    },
+    "FIXME": {
+      "icon": "flame",
+      "background": "#E4A11B",
+      "iconColour": "#E4A11B",
+      "foreground": "#FBFBFB"
+    }
+  }
+}
