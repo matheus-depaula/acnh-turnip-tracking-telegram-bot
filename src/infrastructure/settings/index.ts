@@ -13,4 +13,8 @@ export class Settings extends SettingValidation {
   public getMessageCronJobRule(): string {
     return this.assertAndReturnStringSetting('MESSAGE_CRON_JOB_RULE');
   }
+
+  public getTurnipCalculatorApiBaseUrl(): string {
+    return this.assertAndReturnStringSetting('TURNIP_CALCULATOR_API_BASE_URL');
+  }
 }

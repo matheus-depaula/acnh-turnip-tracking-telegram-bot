@@ -3,7 +3,6 @@ import { Logger } from '../logger';
 
 export class Scheduler {
   public jobs!: Job[];
-
   private logger!: Logger;
 
   constructor() {
