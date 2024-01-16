@@ -1,4 +1,4 @@
-## ACNH Turnip Tracking Telegram Bot
+## 🍃 ACNH Turnip Tracking Telegram Bot
 
 <div align="center">
   <a href="#">
