@@ -7,8 +7,8 @@ on:
     branches:
       - main
     paths-ignore:
-      - '.github'
-      - '.vscode'
+      - '.github/**/*'
+      - '.vscode/**/*'
       - '.gitignore'
       - '.eslint*'
       - '.prettier*'
