@@ -1,10 +1,15 @@
 {
   "name": "acnh-turnip-tracking-telegram-bot",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "main": "index.js",
   "license": "ISC",
   "author": "Matheus de Paula <matheus.depauladomingos@gmail.com> (https://twitter.com/math_dpaula)",
-  "keywords": ["ACNH", "Animal Crossing", "New Horizons", "Telegram Bot"],
+  "keywords": [
+    "ACNH",
+    "Animal Crossing",
+    "New Horizons",
+    "Telegram Bot"
+  ],
   "scripts": {
     "build": "tsc",
     "prebuild": "yarn lint && rimraf dist && cpx env dist/src && cpx package.json dist",
@@ -34,6 +39,7 @@
   },
   "dependencies": {
     "dotenv": "^16.3.1",
+    "jimp": "^0.22.10",
     "log4js": "^6.9.1",
     "node-schedule": "^2.1.1",
     "node-telegram-bot-api": "^0.64.0"

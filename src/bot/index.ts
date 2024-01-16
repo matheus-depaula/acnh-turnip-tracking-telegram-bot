@@ -3,6 +3,7 @@ import { Settings } from '../infrastructure/settings';
 import { Logger } from '../services/logger';
 import { Scheduler } from '../services/scheduler';
 import { TurnipCalculatorApi } from '../services/turnip-calculator-api';
+import { Jimp, WriteOnImageProps } from '../services/jimp';
 
 export class Bot {
   private commands!: BotCommand[];
@@ -37,6 +38,7 @@ export class Bot {
     this.bot.onText(/\/subscribe/, this.onSubscribe);
     this.bot.onText(/\/unsubscribe/, this.onUnsubscribe);
     this.bot.onText(/\/ping/, this.onPing);
+    this.bot.onText(/\/test/, this.onTest);
   }
 
   private onSubscribe = (message: Message) => {
@@ -50,6 +52,16 @@ export class Bot {
   private onUnsubscribe = (message: Message) => this.scheduler.removeJob(message.chat.id);
 
   private onPing = (message: Message) => this.bot.sendMessage(message.chat.id, 'Pong');
+
+  private onTest = (message: Message) => {
+    const params: WriteOnImageProps = {
+      text: `Hello, ${message.from?.first_name}`,
+      filename: 'isabelle.png',
+      coordinates: { x: 400, y: 710 },
+    };
+
+    Jimp.writeOnImage(params).then(data => this.bot.sendPhoto(message.chat.id, data));
+  };
 
   private dailyReminder(chatId: number) {
     this.bot.sendMessage(chatId, 'Daily reminder!');
