@@ -8,7 +8,7 @@ export interface WriteOnImageProps {
 
 export class Jimp {
   static async writeOnImage({ text, filename, coordinates }: WriteOnImageProps) {
-    const font = await jimp.loadFont(jimp.FONT_SANS_64_BLACK);
+    const font = await jimp.loadFont(`${process.cwd()}/assets/fonts/Capriola.fnt`);
     const image = await jimp.read(`${process.cwd()}/assets/images/${filename}`);
 
     image.print(font, coordinates.x, coordinates.y, text);
