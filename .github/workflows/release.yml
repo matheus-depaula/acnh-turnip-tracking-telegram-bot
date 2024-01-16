@@ -7,8 +7,13 @@ on:
     branches:
       - main
     paths-ignore:
-      - '.github/**/*.yml'
+      - '.github'
+      - '.vscode'
       - '.gitignore'
+      - '.eslint*'
+      - '.prettier*'
+      - 'tsconfig.json'
+      - 'README.md'
 
 permissions:
   checks: write
